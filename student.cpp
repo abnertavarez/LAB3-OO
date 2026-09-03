@@ -65,6 +65,10 @@ void printinfo() const {
             id = i;
             setGpa(g);
         }
+        // TODO (Parte E): Destructor.
+        ~Student() {
+            cout << "Student object with name '" << name << "' has been destroyed." << endl;
+        }
 
         // TODO (Parte C): setName(string n)
         // Solo asigna si n no esta vacio.
@@ -113,17 +117,4 @@ int main() {
 
     return 0;
 }
-
-
-
- 
-    // TODO (Parte C): Crea un Student usando el constructor default,
-    // asigna valores con los setters, e imprime con printInfo().
-    // TODO (Parte C): Prueba setGpa() con un valor invalido (ej. 5.0)
-    // y confirma que el mensaje de error aparece y el gpa no cambia.
-
-    // ===== No lo toques todavia - le toca mas adelante =====
-
-    // TODO (Parte D): Crea un segundo Student usando el constructor con
-    // parametros, con datos dummy (ej. "Alice Smith", 1001, 3.7).
 
