@@ -13,8 +13,10 @@ using namespace std;
 
 class Student{
     private:
+
     string name;
      int id;
+
      double gpa;
 
         public:
@@ -56,7 +58,13 @@ void printinfo() const {
                  << "ID: " << id << "\n"
                  << "GPA: " << gpa << "\n";
         }
-     
+     // TODO (Parte D): Constructor with parameters (name, id, gpa).
+
+     Student(string n, int i, double g) {
+            name = n;
+            id = i;
+            setGpa(g);
+        }
 
         // TODO (Parte C): setName(string n)
         // Solo asigna si n no esta vacio.
@@ -80,13 +88,32 @@ void printinfo() const {
 
 int main() {
     // ===== Resuelve estos TODO ahora (Parte C) =====
-    Student  s1;
+
+    Student s1;
     cout << "---initial state ---" << endl;
+
     s1.setName("Abner");
     s1.printinfo();
-Student s2;
-    s2.setGpa(5.0);
-    
+
+    Student s2;
+    s2.setId(1008);
+    s2.printinfo();
+
+    Student s3;
+    s3.setGpa(3.5);
+    s3.printinfo();
+
+    // Prueba GPA invalido
+    s3.setGpa(5.0);
+    s3.printinfo();
+
+    // ===== Parte D =====
+    Student s4("Alicia Smith", 1001, 3.7);
+    s4.printinfo();
+
+    return 0;
+}
+
 
 
  
@@ -99,8 +126,4 @@ Student s2;
 
     // TODO (Parte D): Crea un segundo Student usando el constructor con
     // parametros, con datos dummy (ej. "Alice Smith", 1001, 3.7).
-
-    return 0;
-}
-
 
